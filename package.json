@@ -1,5 +1,5 @@
 {
-  "name": "matchers",
+  "name": "ajs-homeworks-oop",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -41,4 +41,3 @@
     "core-js": "^3.39.0"
   }
 }
-
