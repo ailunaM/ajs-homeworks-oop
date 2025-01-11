@@ -1,4 +1,4 @@
-class Character {
+export class Character {
   constructor(name, type) {
     const types = [
       "Bowman",
@@ -9,7 +9,7 @@ class Character {
       "Zombie",
     ];
 
-    if (typeof name !== "string" || name < 2 || name > 10) {
+    if (typeof name !== "string" || name.length < 2 || name.length > 10) {
       throw new Error("Incorrect values");
     }
     if (!types.includes(type)) {
@@ -22,7 +22,7 @@ class Character {
   }
 }
 
-class Bowman extends Character {
+export class Bowman extends Character {
   constructor(name) {
     super(name, "Bowman");
     this.attack = 25;
@@ -31,7 +31,7 @@ class Bowman extends Character {
 }
 console.log(new Bowman('legolas'));
 
-class Swordsman extends Character {
+export class Swordsman extends Character {
   constructor(name) {
     super(name, "Swordsman");
     this.attack = 10;
@@ -39,7 +39,7 @@ class Swordsman extends Character {
   }
 }
 console.log(new Swordsman('aragorn'));
-class Magician extends Character {
+export class Magician extends Character {
   constructor(name) {
     super(name, "Magician");
     this.attack = 10;
@@ -47,7 +47,7 @@ class Magician extends Character {
   }
 }
 console.log(new Magician('gendalf'));
-class Daemon extends Character {
+export class Daemon extends Character {
   constructor(name) {
     super(name, "Daemon");
     this.attack = 10;
@@ -55,7 +55,7 @@ class Daemon extends Character {
   }
 }
 console.log(new Daemon('barlog'));
-class Undead extends Character {
+export class Undead extends Character {
   constructor(name) {
     super(name, "Undead");
     this.attack = 25;
@@ -63,7 +63,7 @@ class Undead extends Character {
   }
 }
 console.log(new Undead('nazgul'));
-class Zombie extends Character {
+export class Zombie extends Character {
   constructor(name) {
     super(name, "Zombie");
     this.attack = 40;
